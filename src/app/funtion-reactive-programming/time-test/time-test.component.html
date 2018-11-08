@@ -1,0 +1,8 @@
+<div>
+  <p>测试你对时间的感觉</p>
+  <div><button #btn>{{hint$|async}}</button></div>
+  <div>{{msg$|async}}</div>
+  <ul>
+    <li *ngFor="let item of this.score$|async">{{item}}</li>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<p>
+  创建一个循环操作符generate
+</p>
+{{source$|async}}
+<p>
+  测试repeatWhen操作符，传参函数中返回一个observable来控制何时重新订阅，传参函数中的参数是一个notification$,当上游数据完成时被触发。
+</p>
+{{repeat$|async}}
+<p>
+    测试defer操作符，它接收一个函数作为参数，这个函数期待返回一个observable或者promise,当defer被订阅时才执行该函数，进而触发observable或promise
+  </p>  
+{{defer$|async}}

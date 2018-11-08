@@ -1,0 +1,6 @@
+<h3>
+  1、值得注意的是，虽然unsubscribe函数调⽤之后，作为Observer不再接受到被推送的数据，但是作为Observable的source$并没有终结，因为始终没有调⽤complete，只不过它再也不会调⽤next函数了。
+</h3>
+<h3>
+  2、hot可以理解为observable并不是数据的生产者，只是搬运工，cold则表示每有一个observer就产生一个新的生产者。
+</h3>

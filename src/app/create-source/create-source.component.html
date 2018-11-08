@@ -1,0 +1,21 @@
+<app-rxjs-generate></app-rxjs-generate>
+<p>
+  timer操作符的第一个参数可以是一个数值，也可以是一个日期对象
+</p>
+<p>
+  observable.from可以接收具有迭代器接口的数据类型，比如数组，类数组，字符串，迭代器函数，以及promise和observable
+</p>
+<p>
+  observable.fromEvent可以接收nodejs中的自定义事件发生器。<br>
+  const emitter = new EventEmitter();<br>
+  const source$ = Observable.fromEvent(emitter, 'msg');<br>
+  source$.subscribe(
+  console.log,
+  error => console.log('catch', error),
+  () => console.log('complete')
+  );
+  emitter.emit('msg', 1);<br>
+  emitter.emit('msg', 2);<br>
+  emitter.emit('another-msg', 'oops');<br>
+  emitter.emit('msg', 3); <br> 
+</p>
