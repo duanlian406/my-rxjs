@@ -15,6 +15,7 @@ import { AssistOperatorsComponent } from './assist-operators/assist-operators.co
 import { FilterOperatorsComponent } from './filter-operators/filter-operators.component';
 import { TransformOperatorsComponent } from './transform-operators/transform-operators.component';
 import { ErrorOperatorsComponent } from './error-operators/error-operators.component';
+import { MulticastOperatorsComponent } from './multicast-operators/multicast-operators.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ErrorOperatorsComponent } from './error-operators/error-operators.compo
     AssistOperatorsComponent,
     FilterOperatorsComponent,
     TransformOperatorsComponent,
-    ErrorOperatorsComponent
+    ErrorOperatorsComponent,
+    MulticastOperatorsComponent
   ],
   imports: [
     BrowserModule,

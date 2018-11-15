@@ -11,6 +11,7 @@ import { AssistOperatorsComponent } from '../assist-operators/assist-operators.c
 import { FilterOperatorsComponent } from '../filter-operators/filter-operators.component';
 import { TransformOperatorsComponent } from '../transform-operators/transform-operators.component';
 import { ErrorOperatorsComponent } from '../error-operators/error-operators.component';
+import { MulticastOperatorsComponent } from '../multicast-operators/multicast-operators.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'seven', component: FilterOperatorsComponent },
   { path: 'eight', component: TransformOperatorsComponent },
   { path: 'night', component: ErrorOperatorsComponent },
+  { path: 'ten', component: MulticastOperatorsComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

@@ -1,0 +1,39 @@
+<p>
+  Subject对象也是⼀个Observable对象，但是因为它有⾃⼰的状态，所以不像Cold Observable对象⼀样每次被subscribe都是⼀个新的开始，正因为如此，Subject对象是不能重复使⽤的，所谓不能重复使⽤，指的是⼀个
+Subject对象⼀旦被调⽤了complete或者error函数，那么，它作为Observable的⽣命周期也就结束了，后续还想调⽤这个Subject对象的next函数传递数据给下游，就没有任何反应。
+</p>
+<p>
+  在前⾯介绍过，⼀个Observable对象的subscribe函数返回的是⼀个Subscription对象，⽽Subscription对象有unsubscribe⽅法，Subject并不是Subscription，但是Subject也有unsubscribe⽅法，如果调动Subject的
+unsubscribe⽅法，那表⽰这个subject已经不管事了，之后再调⽤这个Subject对象的next⽅法就会出错。
+</p>
+<p>
+  有意思的是Subject有多个Observer的场景，如果Subject的某个下游数据流产⽣了⼀个错误异常，⽽且这个错误异常没有被Observer处理，那这个Subject其他的Observer都会失败。
+</p>
+<div>
+  <h3>connect</h3>
+  <div>{{connect$|async}}</div>
+</div>
+<div>
+  <h3>refCount</h3>
+  <div>{{refCount$|async}}</div>
+</div>
+<div>
+  <h3>publish</h3>
+  <div>{{publish$|async}}</div>
+</div>
+<div>
+  <h3>share</h3>
+  <div>{{share$|async}}</div>
+</div>
+<div>
+  <h3>publishLast</h3>
+  <div>{{publishLast$|async}}</div>
+</div>
+<div>
+  <h3>publishReplay</h3>
+  <div>{{publishReplay$|async}}</div>
+</div>
+<div>
+  <h3>publishBehavior</h3>
+  <div>{{publishBehavior$|async}}</div>
+</div>
